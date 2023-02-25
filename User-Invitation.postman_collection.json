@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "5879d3d7-c052-4c36-b412-da2eae77fd7a",
+		"name": "User-Invitation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9915006"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pavithran@gmail.com\",\n  \"password\": \"password\",\n  \"name\": \"Pavithran\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pavithran.1@gmail.com\",\n  \"password\": \"password\",\n  \"name\": \"Pavithran\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-Ig1eE+pbMIIJce+taY0hAXjs2oM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:09:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"pavithran.1@gmail.com\",\n    \"password\": \"password\",\n    \"name\": \"Pavithran\",\n    \"_id\": \"63fa08868a59f44c765df4c4\",\n    \"createdAt\": \"2023-02-25T13:09:26.726Z\",\n    \"updatedAt\": \"2023-02-25T13:09:26.726Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Create User Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pavithran.1@gmail.com\",\n  \"password\": \"password\",\n  \"name\": \"Pavithran\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "104"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"68-BxQ+1CblxkzEUNxGRjSlkGLmBnU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:08:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 409,\n    \"message\": \"User with email \\\"pavithran@gmail.com\\\" already exists\",\n    \"error\": \"Conflict\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pavithran@gmail.com\",\n  \"password\": \"password\",\n  \"name\": \"Pavithran\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login User - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pavithran@gmail.com\",\n  \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "437"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b5-wlpClKzTaVRtc3D3dHDofViDVx4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:42:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"63fa1012e1c8c682abbda194\",\n        \"email\": \"pavithran@gmail.com\",\n        \"password\": \"$2b$10$wtvF5S02m/gVCrunyqjUOuDfkRljgLNxGLq9VAIN2p0MVYq/iC3kO\",\n        \"name\": \"Pavithran\",\n        \"createdAt\": \"2023-02-25T13:41:38.669Z\",\n        \"updatedAt\": \"2023-02-25T13:41:38.669Z\",\n        \"__v\": 0\n    },\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdml0aHJhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzczMzI1NDYsImV4cCI6MTY3NzMzNjE0Nn0.dRO3ZGK2pF14T6gLhIygkWhLj8ma8AzlOhcvLOmmFCE\"\n}"
+				},
+				{
+					"name": "Login User - Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pavithran@gmail.com\",\n  \"password\": \"passwordd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-Q1tnTobkDws+jDeR8kAzSNJt4Kc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:42:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Please provide correct credentials!\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Send Invitation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdml0aHJhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzczMzI1NDYsImV4cCI6MTY3NzMzNjE0Nn0.dRO3ZGK2pF14T6gLhIygkWhLj8ma8AzlOhcvLOmmFCE",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{BS_ADMIN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"helloword@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/invitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invitation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Send Invitation - Duplicate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"helloword@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8b-r4wk+rbrDPqxJHke6xmdYL2aa2I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:48:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Invitation already exists for the provided email\",\n    \"timestamp\": \"2023-02-25T13:48:35.931Z\",\n    \"path\": \"/invitation\"\n}"
+				},
+				{
+					"name": "Send Invitation - Invalid Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"helloword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "112"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"70-Dlx/B++f4HWC0t9iaKt9YnEF/IM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:49:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Invalid email address\",\n    \"timestamp\": \"2023-02-25T13:49:10.969Z\",\n    \"path\": \"/invitation\"\n}"
+				},
+				{
+					"name": "Send Invitation - Auth Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"helloword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-c/36gnlkV1FiR7m5t63uAWeMvB4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 13:49:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\",\n    \"timestamp\": \"2023-02-25T13:49:40.861Z\",\n    \"path\": \"/invitation\"\n}"
+				},
+				{
+					"name": "Send Invitation -Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"helloword2@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ea-ZG5D5W438/DXcPVAAypSM2OFHgY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 16:04:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"helloword2@gmail.com\",\n    \"invitationCode\": \"i0bm8ztd\",\n    \"status\": \"pending\",\n    \"sentBy\": \"63fa1012e1c8c682abbda194\",\n    \"_id\": \"63fa318bf75969fd91db6970\",\n    \"createdAt\": \"2023-02-25T16:04:27.345Z\",\n    \"updatedAt\": \"2023-02-25T16:04:27.345Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Sent Invitations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZhMTAxMmUxYzhjNjgyYWJiZGExOTQiLCJlbWFpbCI6InBhdml0aHJhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzczNDA5Njd9.im7c5HYS-V6Ux96h9e7uJ5Ml-sxNJNkPZqhaNnUduFM",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{BS_ADMIN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/invitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invitation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Sent Invitations - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "471"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d7-cxn1R+Od+nHBW9EOiR+uP8IyTsU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 16:09:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"63fa3178f75969fd91db696d\",\n        \"email\": \"helloword1@gmail.com\",\n        \"invitationCode\": \"0iac0ml2\",\n        \"status\": \"pending\",\n        \"sentBy\": \"63fa1012e1c8c682abbda194\",\n        \"createdAt\": \"2023-02-25T16:04:08.977Z\",\n        \"updatedAt\": \"2023-02-25T16:04:08.977Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63fa318bf75969fd91db6970\",\n        \"email\": \"helloword2@gmail.com\",\n        \"invitationCode\": \"i0bm8ztd\",\n        \"status\": \"pending\",\n        \"sentBy\": \"63fa1012e1c8c682abbda194\",\n        \"createdAt\": \"2023-02-25T16:04:27.345Z\",\n        \"updatedAt\": \"2023-02-25T16:04:27.345Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Get Sent Invitations - Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-tXocSskMzpbnu0dgoLqA2e+CCsg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 16:19:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\",\n    \"timestamp\": \"2023-02-25T16:19:33.386Z\",\n    \"path\": \"/invitation\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Invitation Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZhMTAxMmUxYzhjNjgyYWJiZGExOTQiLCJlbWFpbCI6InBhdml0aHJhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzczNDA5Njd9.im7c5HYS-V6Ux96h9e7uJ5Ml-sxNJNkPZqhaNnUduFM",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{BS_ADMIN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/invitation/helloword1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invitation",
+						"helloword1@gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Invitation Details - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/invitation/helloword1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation",
+								"helloword1@gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ea-IpUGrAAjD8QNej1QHt+nkhP+o6c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 16:23:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"63fa3178f75969fd91db696d\",\n    \"email\": \"helloword1@gmail.com\",\n    \"invitationCode\": \"0iac0ml2\",\n    \"status\": \"pending\",\n    \"sentBy\": \"63fa1012e1c8c682abbda194\",\n    \"createdAt\": \"2023-02-25T16:04:08.977Z\",\n    \"updatedAt\": \"2023-02-25T16:04:08.977Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Get Invitation Details - Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/invitation/helloword1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invitation",
+								"helloword1@gmail.com"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "124"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7c-NkxhgzbqdvlzCNhtckN/bGQyi0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Feb 2023 16:24:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\",\n    \"timestamp\": \"2023-02-25T16:24:36.499Z\",\n    \"path\": \"/invitation/helloword1@gmail.com\"\n}"
+				}
+			]
+		}
+	]
+}
